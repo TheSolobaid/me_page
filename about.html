@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/favicon/penguin_icon.png" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Samuel Rolli</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <img class="logo" src="images/favicon/penguin_icon.png" alt="Logo">
+            <span class="titre">À propos de Samuel ROLLI</span>
+            <img class="logo" src="images/favicon/penguin_icon.png" alt="Logo">
+        </h1>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+
+    <nav>
+        <a class="selector" href="index">Accueil</a> |
+        <a class="selector" href="interest">Centres d'intérêts</a> |
+        <a class="selector" href="contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Je suis Samuel Rolli, Technicien Réseau & Télécoms. Passionné par l'informatique, les serveurs, la musique et l'escalade, je combine compétences techniques et créativité pour mener à bien divers projets.</p>
+        </section>
+    
+        <section id="skills">
+            <h2>Compétences</h2>
+            <p>
+                J'ai mis en place un homelab basé sur Proxmox, hébergeant plusieurs services comme Plex, Nextcloud et OnlyOffice Workstation. Ce site est aussi hébergé sur ce serveur.
+            </p>
+              
+            <p>
+                Je suis également passionné par la programmation, notamment en Python, et je suis en train de me former sur les technologies web.
+            </p>
+        </section>
+    
+        <section id="image_penguin">
+            <img src="images/penguin_on_linux.gif" alt="penguin on linux" class="image_penguin">
+        </section>
+    </main>
+    
+
+    <footer>
+        <p><a class="github" href="https://github.com/TheSolobaid" target="_blank">© Samuel Rolli</a></p>
+    </footer>
+
+    <script>
+        // Check if dark mode was enabled before
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('theme-toggle').innerText = 'Light Mode';
+        }
+    
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+    
+            // Update button text
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('theme-toggle').innerText = 'Light Mode';
+            } else {
+                localStorage.setItem('theme', 'light');
+                document.getElementById('theme-toggle').innerText = 'Dark Mode';
+            }
+        }
+    </script>
+    
+</body>
+</html>

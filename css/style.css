@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    margin: 0;
+    background-color: #cbdbfc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Mode sombre */
+.dark-mode {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+.dark-mode nav {
+    background-color: #1a1a2e;
+}
+
+.dark-mode nav a.selector {
+    color: #e0e0e0;
+}
+
+.dark-mode footer {
+    background-color: #111;
+}
+
+/* Header */
+header {
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cbdbfc;
+    color: #333;
+    font-size: 2.5em;
+    border-bottom: 2px solid #79a2f3;
+}
+
+.dark-mode header h1 {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+header .titre {
+    margin: 0 20px;
+    text-align: center;
+}
+
+header img.logo {
+    height: 50px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cbdbfc;
+    border-bottom: 2px solid #79a2f3;
+    padding: 10px 0;
+    gap : 20px;
+
+}
+.dark-mode nav {
+    background-color: #1a1a2e;
+}
+
+nav a.selector {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 5px 15px; /* Adds padding to each link */
+    transition: color 200ms;
+}
+
+nav a.selector:hover {
+    color: #79a2f3;
+}
+
+.dark-mode nav a.selector:hover {
+    color: #f39c12;
+}
+
+nav .separator {
+    color: #79a2f3;
+    font-size: 16px;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+main section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #79a2f3;
+    padding-bottom: 5px;
+}
+
+main section p, main section ul {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+main section ul {
+    list-style: none;
+    padding: 0;
+}
+
+main section ul li {
+    margin-bottom: 10px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #79a2f3;
+    margin-top: 20px;
+}
+
+.image_penguin {
+    width: 40%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #cbdbfc;
+    color: #79a2f3;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #79a2f3;
+}
+
+.dark-mode footer {
+    background-color: #111;
+    color: #f39c12;
+}
+
+/* GitHub Link */
+footer a.github {
+    color: #333;
+    text-decoration: none;
+    transition: color 200ms;
+}
+
+footer a.github:hover {
+    color: #79a2f3;
+}
+
+.dark-mode footer a.github:hover {
+    color: #f39c12;
+}
+
+/* Dark Mode Button */
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #79a2f3;
+}
+
+.dark-mode .theme-toggle {
+    background: #f39c12;
+    color: #000;
+}
+
+/* Additional Elements */
+aside.right {
+    float: right;
+    margin: 20px 0 20px 20px;
+    width: 40%;
+}
+
+aside img.server {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #79a2f3;
+}
+
+.junk {
+    font-size: 0.9em;
+    text-align: center;
+    color: #AAAAAA;
+    margin-top: 10px;
+}
+
+/* Links */
+main section a.lien {
+    color: #2468f0;
+    text-decoration: none;
+    transition: color 200ms;
+}
+
+main section a.lien:hover {
+    color: #333;
+}
+
+footer a.github {
+    color: #2468f0;
+    text-decoration: none;
+    transition: color 200ms;
+}
+
+footer a.github:hover {
+    color: #333;
+}

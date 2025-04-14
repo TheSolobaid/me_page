@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/favicon/penguin_icon.png" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centres d'intérêts - Samuel Rolli</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <img class="logo" src="images/favicon/penguin_icon.png" alt="Logo">
+            <span class="titre">Mes Centres d'intérêts</span>
+            <img class="logo" src="images/favicon/penguin_icon.png" alt="Logo">
+        </h1>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+
+    <nav>
+        <a class="selector" href="about">À propos</a>
+        <span class="separator">|</span>
+        <a class="selector" href="index">Accueil</a>
+        <span class="separator">|</span>
+        <a class="selector" href="contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="interests">
+            <h2>Centres d'intérêts</h2>
+            <ul>
+                <li><strong>Informatique :</strong> Programmation, réseaux et télécommunications, Linux</li>
+                <li><strong>Serveurs :</strong> Administration de serveurs avec Proxmox, Plex, Nextcloud, et gestion de torrent</li>
+                <li><strong>Musique :</strong> 
+                    <a href="https://music.youtube.com/playlist?list=PL1m9xNdWQmYWoIBnvkXuGFQTO3NNrnVrH" class="lien">Électronique</a>, 
+                    <a href="https://music.youtube.com/playlist?list=PL1m9xNdWQmYVhdYmDraZGV4EPvbmZPGQt" class="lien">Classique</a>, 
+                    "<a href="https://music.youtube.com/browse/VLPL1m9xNdWQmYXTgJzA0ZTsHa51TzgwsP4T" class="lien">Chill</a>"
+                </li>
+                <li><strong>Escalade :</strong> Grimpe en salle pour le plaisir</li>
+            </ul>
+            <img src="images/penguin_music.gif" alt="Image d'intérêts" class="image_penguin">
+        </section>
+    </main>
+
+    <footer>
+        <p><a class="github" href="https://github.com/TheSolobaid" target="_blank">© Samuel Rolli</a></p>
+    </footer>
+
+    <script>
+        // Check if dark mode was enabled before
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('theme-toggle').innerText = 'Light Mode';
+        }
+    
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+    
+            // Update button text
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('theme-toggle').innerText = 'Light Mode';
+            } else {
+                localStorage.setItem('theme', 'light');
+                document.getElementById('theme-toggle').innerText = 'Dark Mode';
+            }
+        }
+    </script>
+    
+</body>
+</html>

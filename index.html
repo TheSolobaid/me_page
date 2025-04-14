@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/favicon/penguin_icon.png" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Samuel Rolli</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <img class="logo" src="images/favicon/penguin_icon.png" alt="Logo">
+            <span class="titre">Bienvenue sur le site de Samuel ROLLI</span>
+            <img class="logo" src="images/favicon/penguin_icon.png" alt="Logo">
+        </h1>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+
+    <nav>
+        <a class="selector" href="about">À propos</a> |
+        <a class="selector" href="interest">Centres d'intérêts</a> |
+        <a class="selector" href="contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="welcome">
+            <h2>Bonjour et bienvenue !</h2>
+            <p>Explorez mon site pour en savoir plus sur moi, mes centres d'intérêts et mes compétences professionnelles.</p>
+            <img src="images/welcome.png" alt="welcome" class="image_penguin">
+        </section>
+    </main>
+
+    <footer>
+        <p><a class="github" href="https://github.com/TheSolobaid" target="_blank">© Samuel Rolli</a></p>
+    </footer>
+
+    <script>
+        // Check if dark mode was enabled before
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('theme-toggle').innerText = 'Light Mode';
+        }
+    
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+    
+            // Update button text
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('theme-toggle').innerText = 'Light Mode';
+            } else {
+                localStorage.setItem('theme', 'light');
+                document.getElementById('theme-toggle').innerText = 'Dark Mode';
+            }
+        }
+    </script>
+    
+</body>
+</html>
