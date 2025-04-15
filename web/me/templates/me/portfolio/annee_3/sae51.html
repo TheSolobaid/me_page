@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Sae 51 : Concevoir, réaliser et présenter une solution technique{% endblock %}
+{% block header_title %}SAE 51 : Concevoir, réaliser et présenter une solution technique{% endblock %}
+
+
+{% block content %}
+<main>
+    <section>
+        <h2>Descriptif générique et objectifs :</h2>
+        <p>Nous avons développé une solution de géolocalisation via LoRaWAN. Une carte Pycom capture des coordonnées GPS, transmises à une passerelle qui les décrypte via un script Python, et les publie via MQTT sur un Raspberry Pi. Une interface Django permet la visualisation en temps réel.</p>
+    </section>
+
+    <section>
+        <h2>Compétences ciblées :</h2>
+            <ul>
+                <li>AC31.01 | Concevoir un projet de réseau informatique d’une entreprise en intégrant les problématiques de haute disponibilité, de QoS, de sécurité et de supervision.</li>
+                <li>AC31.02 | Réaliser la documentation technique de ce projet.</li>
+                <li>AC31.03 | Réaliser une maquette de démonstration du projet.</li>
+                <li>AC31.04 | Défendre/argumenter un projet.</li>
+                <li>AC31.05 | Communiquer avec les acteurs du projet.</li>
+                <li>AC31.06 | Gérer le projet en respectant les délais.</li>
+                <li>AC32.01 | Déployer un système de communication pour l’entreprise.</li>
+                <li>AC32.02 | Déployer un réseau d’accès sans fil pour le réseau d’entreprise en intégrant les enjeux de la sécurité.</li>
+                <li>AC32.03 | Déployer un réseau d’accès fixe ou mobile pour un opérateur de télécommunications en intégrant la sécurité.</li>
+                <li>AC32.04 | Permettre aux collaborateurs de se connecter de manière sécurisée au système d’information de l’entreprise.</li>
+                <li>AC33.01 | Élaborer les spécifications techniques et le cahier des charges d’une application informatique.</li>
+                <li>AC33.02 | Mettre en place un environnement de travail collaboratif.</li>
+                <li>AC33.03 | Participer à la formation des utilisateurs.</li>
+                <li>AC33.04 | Déployer et maintenir une solution informatique.</li>
+                <li>AC33.05 | S’informer sur les évolutions et les nouvelles technologies.</li>
+                <li>AC33.06 | Sécuriser l’environnement numérique d’une application.</li>
+            </ul>
+    </section>
+
+    <section>
+        <h2>Apprentissages critiques :</h2>
+        <p>Ce projet nous a permis d’aborder les enjeux de développement durable via LoRaWAN (basse conso), tout en respectant les normes RGPD.</p>
+    </section>
+
+    <section>
+        <h2>Preuves Matérielles :</h2>
+        <p>Je ne détiens plus de preuve pour cette SAE.</p>
+    </section>
+</main>
+{% endblock %}
