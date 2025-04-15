@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}BUT2 - Samuel Rolli{% endblock %}
+{% block header_title %}B.U.T. 2 Réseaux et Télécoms{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Présentation BUT 2 :</h1>
+    <h2>
+        Cette deuxième année de BUT Réseaux et Télécommunications a été marquée par une montée en compétences significative. Elle m’a permis d’approfondir mes connaissances techniques tout en renforçant mes aptitudes à collaborer efficacement en équipe.
+    </h2>
+    <h2>
+        Les projets SAE ont été essentiels dans cette progression, offrant des situations concrètes qui m’ont permis de mettre en œuvre des solutions réseau complexes. Cette année fut également l’occasion de mieux appréhender les exigences du monde professionnel.
+    </h2>
+
+    <ul>
+        <li><a href="{% url 'sae' annee=2 sae='sae21' %}" class="lien">SAE 21 : Conception d’une infrastructure réseau</a></li>
+        <li><a href="{% url 'sae' annee=2 sae='sae22' %}" class="lien">SAE 22 : Gestion de projet et documentation</a></li>
+        <li><a href="{% url 'sae' annee=2 sae='sae2ROM1' %}" class="lien">SAE 2.ROM.1 : Administration des services réseau</a></li>
+        <li><a href="{% url 'sae' annee=2 sae='sae2ROM2' %}" class="lien">SAE 2.ROM.2 : Sécurité des infrastructures</a></li>
+    </ul>
+</section>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}BUT1 - Samuel Rolli{% endblock %}
+{% block header_title %}B.U.T. 1 Réseaux et Télécoms{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Présentation BUT 1 :</h1>
+    <h2>
+        La première année du BUT Réseaux et Télécommunications a constitué une phase d’initiation essentielle. Elle m’a permis d’acquérir les bases fondamentales en réseau, télécommunications et informatique.
+    </h2>
+    <h2>
+        Grâce aux différents projets menés dans le cadre des SAE, j’ai pu découvrir le travail en équipe, apprendre à concevoir des solutions techniques simples et développer un premier regard critique sur les technologies utilisées.
+    </h2>
+
+    <ul>
+        <li><a href="{% url 'sae' annee=1 sae='sae11' %}" class="lien">SAE 11 : Initiation à la configuration réseau</a></li>
+        <li><a href="{% url 'sae' annee=1 sae='sae12' %}" class="lien">SAE 12 : Mise en œuvre de services informatiques</a></li>
+        <li><a href="{% url 'sae' annee=1 sae='sae1ROM1' %}" class="lien">SAE 1.ROM.1 : Introduction aux systèmes d’exploitation</a></li>
+        <li><a href="{% url 'sae' annee=1 sae='sae1ROM2' %}" class="lien">SAE 1.ROM.2 : Sécurité et supervision de réseau</a></li>
+    </ul>
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}BUT3 - Samuel Rolli{% endblock %}
+{% block header_title %}B.U.T. 3 Réseaux et Télécoms{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Présentation BUT 3 :</h1>
+    <h2>
+        Ce document présente les savoir-faire et les connaissances acquis lors de notre troisième année au sein du BUT Réseaux et Télécommunications. Cette dernière année vise à renforcer notre expertise dans la conception, la gestion et l’optimisation des systèmes réseaux et des infrastructures de télécommunications.
+    </h2>
+    <h2>
+        Les différentes SAE menées cette année ont été l’occasion de travailler sur des problématiques plus complexes et proches de la réalité du terrain, consolidant ainsi notre professionnalisation. En parallèle, mon expérience en alternance a grandement contribué à mon évolution. Je vais vous exposer les projets réalisés dans le cadre des SAE ainsi que les compétences développées, tout en partageant mon retour d’expérience sur l’alternance.
+    </h2>
+
+    <ul>
+        <li><a href="{% url 'sae' annee=3 sae='sae51' %}" class="lien">Sae 51 : Concevoir, réaliser et présenter une solution technique</a></li>
+        <li><a href="{% url 'sae' annee=3 sae='sae52' %}" class="lien">Sae 52 : Piloter un projet informatique</a></li>
+        <li><a href="{% url 'sae' annee=3 sae='sae5ROM3' %}" class="lien">Sae 5.ROM.3 : Déployer et gérer les services ROM</a></li>
+        <li><a href="{% url 'sae' annee=3 sae='sae6ROM1' %}" class="lien">Sae 6.ROM.1 : Réaliser une veille technologique</a></li>
+        <li><a href="{% url 'sae' annee=3 sae='stagerom' %}" class="lien">STAGE.ROM : Alternance</a></li>
+    </ul>
+</section>
+{% endblock %}

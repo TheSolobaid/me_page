@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Portfolio - Samuel Rolli{% endblock %}
+{% block header_title %}Mon portfolio{% endblock %}
+
+{% block content %}
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <ul>
+        <li><a href="{% url 'portfolio_annee' 1 %}" class="lien">1re année</a></li>
+        <li><a href="{% url 'portfolio_annee' 2 %}" class="lien">2e année</a></li>
+        <li><a class="lien" href="{% url 'portfolio_annee' 3 %}">3e année</a></li>
+    </ul>
+</section>
+{% endblock %}

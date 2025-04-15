@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Accueil - Samuel Rolli{% endblock %}
+
+{% block header_title %}Bienvenue sur le site de Samuel ROLLI{% endblock %}
+
+{% block content %}
+<section id="welcome">
+    <h2>Bonjour et bienvenue !</h2>
+    <p>Explorez mon site pour en savoir plus sur moi, mes centres d'intérêts et mes compétences professionnelles.</p>
+    <img src="{% static 'images/welcome.png' %}" alt="welcome" class="image_penguin">
+</section>
+{% endblock %}

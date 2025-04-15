@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Centres d'intérêts - Samuel Rolli{% endblock %}
+
+{% block header_title %}Mes Centres d'intérêts{% endblock %}
+
+{% block content %}
+<section id="interests">
+    <h2>Centres d'intérêts</h2>
+    <ul>
+        <li><strong>Informatique :</strong> Programmation, réseaux et télécommunications, Linux</li>
+        <li><strong>Serveurs :</strong> Administration de serveurs avec Proxmox, Plex, Nextcloud, et gestion de torrent</li>
+        <li><strong>Musique :</strong>
+            <a href="https://music.youtube.com/playlist?list=PL1m9xNdWQmYWoIBnvkXuGFQTO3NNrnVrH" class="lien">Électronique</a>,
+            <a href="https://music.youtube.com/playlist?list=PL1m9xNdWQmYVhdYmDraZGV4EPvbmZPGQt" class="lien">Classique</a>,
+            "<a href="https://music.youtube.com/browse/VLPL1m9xNdWQmYXTgJzA0ZTsHa51TzgwsP4T" class="lien">Chill</a>"
+        </li>
+        <li><strong>Escalade :</strong> Grimpe en salle pour le plaisir</li>
+    </ul>
+    <img src="{% static 'images/penguin_music.gif' %}" alt="Image d'intérêts" class="image_penguin">
+</section>
+{% endblock %}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'images/favicon/penguin_icon.png' %}" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Samuel Rolli{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>
+            <img class="logo" src="{% static 'images/favicon/penguin_icon.png' %}" alt="Logo">
+            <span class="titre">{% block header_title %}Bienvenue sur le site de Samuel ROLLI{% endblock %}</span>
+            <img class="logo" src="{% static 'images/favicon/penguin_icon.png' %}" alt="Logo">
+        </h1>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+
+    <nav>
+        <a class="selector" href="{% url 'index' %}">Accueil</a>
+        <span class="separator">|</span>
+        <a class="selector" href="{% url 'about' %}">À propos</a>
+        <span class="separator">|</span>
+        <a class="selector" href="{% url 'interest' %}">Centres d'intérêts</a>
+        <span class="separator">|</span>
+        <a class="selector" href="{% url 'contact' %}">Contact</a>
+        <span class="separator">|</span>
+        <a class="selector" href="{% url 'portfolio' %}">Portfolio</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p><a class="github" href="https://github.com/TheSolobaid" target="_blank">© Samuel Rolli</a></p>
+    </footer>
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('theme-toggle').innerText = 'Light Mode';
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('theme-toggle').innerText = 'Light Mode';
+            } else {
+                localStorage.setItem('theme', 'light');
+                document.getElementById('theme-toggle').innerText = 'Dark Mode';
+            }
+        }
+    </script>
+</body>
+</html>
