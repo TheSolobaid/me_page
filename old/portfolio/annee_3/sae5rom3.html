@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/favicon/penguin_icon.png" type="image/gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sae 5.ROM3 : Déployer et gérer les services ROM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <img class="logo" src="images/favicon/penguin_icon.png" alt="Logo">
+            <span class="titre">Sae 5.ROM3 : Déployer et gérer les services ROM</span>
+            <img class="logo" src="images/favicon/penguin_icon.png" alt="Logo">
+        </h1>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="section-title">Descriptif générique et objectifs :</h2>
+            <div class="description">
+                <p>Au cours de cette période de formation, nous avons exploré en profondeur les technologies liées aux services multimédias et aux réseaux opérateurs à travers une série de travaux pratiques approfondis. Bien que nous n'ayons pas réalisé de SAÉ traditionnelle, l'enchaînement de ces TP nous a permis d'acquérir une expertise significative dans des domaines clés tels que :</p>
+                <ul>
+                    <li>La visioconférence : configuration et administration de systèmes de visioconférence, gestion de la qualité de service (QoS) pour assurer des communications fluides.</li>
+                    <li>La vidéoprotection : mise en place de systèmes de surveillance vidéo IP, configuration de caméras, gestion des flux vidéo et des enregistrements.</li>
+                    <li>L'IPTV (Internet Protocol Television) : déploiement et administration de services de télévision sur IP, configuration de flux vidéo, gestion des droits d'accès.</li>
+                    <li>Les VPN (Virtual Private Networks) : configuration de VPN pour sécuriser les communications entre sites distants.</li>
+                    <li>Le SD-WAN (Software-Defined Wide Area Network) : mise en place d'architecture SD-WAN pour optimiser les performances des réseaux WAN.</li>
+                    <li>La virtualisation : mise en œuvre de serveurs virtualisés, configuration de VLAN (Virtual Local Area Networks) et de VRF (Virtual Routing and Forwarding).</li>
+                    <li>L'automatisation : utilisation d'outils tels qu'Ansible pour automatiser les tâches de configuration et de déploiement.</li>
+                </ul>
+                <p>Ces travaux pratiques ont permis de développer des compétences pratiques essentielles dans le déploiement et l'administration de services multimédias et de réseaux opérateurs, en mettant l'accent sur la virtualisation et l'automatisation.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Compétences ciblées :</h2>
+            <div class="compétences">
+                <ul>
+                    <li>Gérer les infrastructures et les services des réseaux opérateurs</li>
+                    <li>Gérer les communications unifiées et la vidéo sur Internet</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Apprentissages critiques :</h2>
+            <div class="apprentissages">
+                <ul>
+                    <li>AC34.01ROM | Administrer/superviser les infrastructures et les services télécom</li>
+                    <li>AC34.02ROM | Administrer et déployer des fonctions réseaux virtualisées et programmer le réseau</li>
+                    <li>AC35.01ROM | Administrer les services multimédias pour une entreprise</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Preuves Matérielles :</h2>
+            <div class="preuves">
+                <p>Je ne détiens plus de preuve pour cette SAE.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a class="github" href="https://github.com/TheSolobaid" target="_blank">© Samuel Rolli</a></p>
+    </footer>
+
+    <script>
+        // Check if dark mode was enabled before
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('theme-toggle').innerText = 'Light Mode';
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+
+            // Update button text
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('theme-toggle').innerText = 'Light Mode';
+            } else {
+                localStorage.setItem('theme', 'light');
+                document.getElementById('theme-toggle').innerText = 'Dark Mode';
+            }
+        }
+    </script>
+</body>
+</html>
