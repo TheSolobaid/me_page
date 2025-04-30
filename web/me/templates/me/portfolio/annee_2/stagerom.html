@@ -1,27 +1,77 @@
 {% extends "base.html" %}
-{% load static %}
 
-{% block title %}STAGE.ROM : Alternance{% endblock %}
-{% block header_title %} STAGE.ROM : Alternance{% endblock %}
+{% block title %}
+STAGE.ROM : Alternance
+{% endblock %}
 
+{% block header_title %}
+STAGE.ROM : Alternance
+{% endblock %}
 
 {% block content %}
-<main>
-    <h2>Descriptif générique et objectifs :</h2>
-    <p>Période en entreprise dédiée à la mise en application concrète des compétences techniques, communicationnelles et organisationnelles du BUT.</p>
+<h1>STAGE.ROM : Alternance</h1>
 
-    <h2>Compétences ciblées :</h2>
-    <ul>
-        <li>Mettre en pratique les compétences vues en cours en situation réelle.</li>
-        <li>Collaborer avec une équipe projet.</li>
-        <li>Adapter ses connaissances à l’environnement professionnel.</li>
-    </ul>
+<p class="portfolio">Cette alternance en milieu professionnel a permis d'appliquer et de consolider les compétences acquises au cours du B.U.T. R&T. L'objectif principal était de s'intégrer dans une entreprise et de participer à des projets liés au déploiement, à l'installation ou au maintien en condition opérationnelle d'infrastructures réseaux et télécoms. Les missions confiées ont permis de développer des compétences techniques et professionnelles variées, en adéquation avec le projet professionnel et le choix de parcours de l'étudiant.</p>
 
-    <h2>Apprentissages critiques :</h2>
-    <ul>
-        <li>ACSTAGE.01ROM | Projet technique</li>
-        <li>ACSTAGE.02ROM | Communication professionnelle</li>
-        <li>ACSTAGE.03ROM | Intégration entreprise</li>
-    </ul>
-</main>
+<h2>Objectifs du projet</h2>
+<ul>
+  <li class="portfolio">S'intégrer dans l'environnement professionnel et comprendre l'organisation de l'entreprise.</li>
+  <li class="portfolio">Développer des compétences techniques dans les domaines des infrastructures réseaux sécurisées, des infrastructures de télécommunications, des réseaux d'objets connectés, des solutions logicielles sur des systèmes Cloud, et du pilotage de projets réseaux ou télécommunications.</li>
+  <li class="portfolio">Appliquer et consolider les savoir-faire et savoir-être acquis lors de la formation.</li>
+  <li class="portfolio">Développer l'autonomie et l'esprit d'initiative.</li>
+  <li class="portfolio">Rendre compte de son activité et de ses missions à l'écrit et à l'oral, en adoptant une démarche structurée et rigoureuse.</li>
+  <li class="portfolio">Mettre en application des compétences techniques tels que la configuration et le dépannage de routage dynamique, la configuration de QoS et de sécurités réseau, l’installation de service ToIP, la virtualisation de services, l’automatisation de tâches via des scripts, et bien d’autres.</li>
+  <li class="portfolio">Créer et présenter un poster détaillant les activités et projets réalisés au sein de l'entreprise.</li>
+</ul>
+
+<h2>Compétences ciblées</h2>
+<ul>
+  <li class="portfolio">Gérer les infrastructures et les services des réseaux opérateurs.</li>
+  <li class="portfolio">Gérer les communications unifiées et la vidéo sur Internet.</li>
+  <li class="portfolio">Administrer les réseaux et l’Internet.</li>
+  <li class="portfolio">Connecter les entreprises et les usagers.</li>
+  <li class="portfolio">Créer des outils et applications informatiques pour les R&T.</li>
+</ul>
+
+<h2>Apprentissages critiques (AC)</h2>
+<ul>
+  <li class="portfolio">AC21.01 | Configurer et dépanner le routage dynamique dans un réseau</li>
+  <li class="portfolio">AC21.02 | Configurer et expliquer une politique simple de QoS et les fonctions de base de la sécurité d’un réseau</li>
+  <li class="portfolio">AC21.03 | Déployer des postes clients et des solutions virtualisées adaptées à une situation donnée</li>
+  <li class="portfolio">AC21.04 | Déployer des services réseaux avancés</li>
+  <li class="portfolio">AC21.05 | Identifier les réseaux opérateurs et l’architecture d’Internet</li>
+  <li class="portfolio">AC21.06 | Travailler en équipe pour développer ses compétences professionnelles</li>
+  <li class="portfolio">AC22.01 | Déployer et caractériser des systèmes de transmissions complexes</li>
+  <li class="portfolio">AC22.02 | Mettre en place un accès distant sécurisé</li>
+  <li class="portfolio">AC22.03 | Mettre en place une connexion multi-site via un réseau opérateur</li>
+  <li class="portfolio">AC22.04 | Déployer des réseaux d’accès des opérateurs</li>
+  <li class="portfolio">AC22.05 | Capacité à questionner un cahier des charges RT</li>
+  <li class="portfolio">AC23.01 | Automatiser l’administration système avec des scripts</li>
+  <li class="portfolio">AC23.02 | Développer une application à partir d’un cahier des charges donné, pour le Web ou les périphériques mobiles</li>
+  <li class="portfolio">AC23.03 | Utiliser un protocole réseau pour programmer une application client/serveur</li>
+  <li class="portfolio">AC23.04 | Installer, administrer un système de gestion de données</li>
+  <li class="portfolio">AC23.05 | Accéder à un ensemble de données depuis une application et/ou un site web</li>
+  <li class="portfolio">AC24.01ROM | Administrer les réseaux d’accès fixes et mobiles</li>
+  <li class="portfolio">AC24.02ROM | Virtualiser des services réseaux</li>
+  <li class="portfolio">AC24.03ROM | Décrire/comprendre l’architecture et les offres des opérateurs</li>
+  <li class="portfolio">AC24.04ROM | Gérer le routage/commutation et les interconnexions</li>
+  <li class="portfolio">AC24.05ROM | Automatiser la gestion des équipements réseaux</li>
+  <li class="portfolio">AC25.01ROM | Choisir une architecture et déployer des services de ToIP</li>
+  <li class="portfolio">AC25.02ROM | Administrer un service de téléphonie pour l’entreprise</li>
+  <li class="portfolio">AC25.03ROM | Mettre en place une politique de QoS pour les applications</li>
+</ul>
+
+<h2>Résumé personnel</h2>
+<p class="portfolio">Au cours de ma formation, j'ai acquis des compétences techniques avancées dans le domaine des réseaux et des systèmes. J'ai appris à configurer et dépanner le routage dynamique, à mettre en place des politiques de QoS et des mesures de sécurité réseau. J'ai également développé des compétences en déploiement de postes clients, de solutions virtualisées et de services réseaux avancés, ainsi qu'en identification des réseaux opérateurs et de l'architecture d'Internet.</p>
+
+<p class="portfolio">Sur le plan des systèmes de transmission, j'ai appris à déployer et caractériser des systèmes complexes, à mettre en place des accès distants sécurisés et des connexions multi-sites via des réseaux opérateurs. J'ai également acquis des compétences en déploiement de réseaux d'accès des opérateurs et en analyse de cahiers des charges RT.</p>
+
+<p class="portfolio">En matière d'automatisation et de développement, j'ai appris à automatiser l'administration système avec des scripts, à développer des applications web et mobiles, à utiliser des protocoles réseau pour programmer des applications client/serveur, à installer et administrer des systèmes de gestion de données, et à accéder à des ensembles de données depuis des applications et des sites web.</p>
+
+<p class="portfolio">Enfin, j'ai acquis des compétences en administration de réseaux d'accès fixes et mobiles, en virtualisation de services réseaux, en compréhension des architectures et offres des opérateurs, en gestion du routage/commutation et des interconnexions, en automatisation de la gestion des équipements réseaux, en déploiement et administration de services de ToIP, et en mise en place de politiques de QoS pour les applications.</p>
+
+<h2>Preuves matérielles</h2>
+<p class="portfolio">Vous pouvez consulter mon poster détaillant les activités et projets réalisés au sein de l'entreprise en suivant ce lien :</p>
+<a href="https://drive.google.com/drive/folders/1pjN7Nz7BuzJZhiRtR41CiMmz1ss0T0vu?usp=sharing">Poster</a>
+
 {% endblock %}

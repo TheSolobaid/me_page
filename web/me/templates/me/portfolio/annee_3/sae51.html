@@ -1,47 +1,54 @@
 {% extends "base.html" %}
-{% load static %}
 
-{% block title %}Sae 51 : Concevoir, réaliser et présenter une solution technique{% endblock %}
-{% block header_title %}SAE 51 : Concevoir, réaliser et présenter une solution technique{% endblock %}
+{% block title %}
+SAÉ 51 : Concevoir, réaliser et présenter une solution technique
+{% endblock %}
 
+{% block header_title %}
+SAÉ 51 : Concevoir, réaliser et présenter une solution technique
+{% endblock %}
 
 {% block content %}
-<main>
-    <section>
-        <h2>Descriptif générique et objectifs :</h2>
-        <p>Nous avons développé une solution de géolocalisation via LoRaWAN. Une carte Pycom capture des coordonnées GPS, transmises à une passerelle qui les décrypte via un script Python, et les publie via MQTT sur un Raspberry Pi. Une interface Django permet la visualisation en temps réel.</p>
-    </section>
+<h1>SAÉ 51 : Concevoir, réaliser et présenter une solution technique</h1>
 
-    <section>
-        <h2>Compétences ciblées :</h2>
-            <ul>
-                <li>AC31.01 | Concevoir un projet de réseau informatique d’une entreprise en intégrant les problématiques de haute disponibilité, de QoS, de sécurité et de supervision.</li>
-                <li>AC31.02 | Réaliser la documentation technique de ce projet.</li>
-                <li>AC31.03 | Réaliser une maquette de démonstration du projet.</li>
-                <li>AC31.04 | Défendre/argumenter un projet.</li>
-                <li>AC31.05 | Communiquer avec les acteurs du projet.</li>
-                <li>AC31.06 | Gérer le projet en respectant les délais.</li>
-                <li>AC32.01 | Déployer un système de communication pour l’entreprise.</li>
-                <li>AC32.02 | Déployer un réseau d’accès sans fil pour le réseau d’entreprise en intégrant les enjeux de la sécurité.</li>
-                <li>AC32.03 | Déployer un réseau d’accès fixe ou mobile pour un opérateur de télécommunications en intégrant la sécurité.</li>
-                <li>AC32.04 | Permettre aux collaborateurs de se connecter de manière sécurisée au système d’information de l’entreprise.</li>
-                <li>AC33.01 | Élaborer les spécifications techniques et le cahier des charges d’une application informatique.</li>
-                <li>AC33.02 | Mettre en place un environnement de travail collaboratif.</li>
-                <li>AC33.03 | Participer à la formation des utilisateurs.</li>
-                <li>AC33.04 | Déployer et maintenir une solution informatique.</li>
-                <li>AC33.05 | S’informer sur les évolutions et les nouvelles technologies.</li>
-                <li>AC33.06 | Sécuriser l’environnement numérique d’une application.</li>
-            </ul>
-    </section>
+<p class="portfolio">Dans le cadre de cette SAÉ, nous avons exploré le potentiel du réseau LoRaWAN en développant une solution de géolocalisation. Le projet consistait à configurer une carte Pycom pour capturer des coordonnées GPS et à transmettre ces données via le protocole LoRaWAN à une passerelle. Un script Python, exécuté sur la passerelle, était chargé de décrypter les données binaires reçues et de les convertir en coordonnées décimales. Ces coordonnées étaient ensuite publiées via le protocole MQTT vers un Raspberry Pi. Sur ce dernier, nous avons développé une interface web dynamique en utilisant le Framework Django, permettant de visualiser les coordonnées GPS en temps réel sur une carte.</p>
 
-    <section>
-        <h2>Apprentissages critiques :</h2>
-        <p>Ce projet nous a permis d’aborder les enjeux de développement durable via LoRaWAN (basse conso), tout en respectant les normes RGPD.</p>
-    </section>
+<p class="portfolio">Ce projet a nécessité une coordination rigoureuse des différentes technologies et des membres de l’équipe. Nous avons mis en œuvre un environnement de travail collaboratif en utilisant Git pour la gestion de version et des outils de communication en ligne pour faciliter les échanges à distance. Une attention particulière a été portée à la sécurité des données, notamment lors de la transmission via MQTT et du stockage sur le Raspberry Pi.</p>
 
-    <section>
-        <h2>Preuves Matérielles :</h2>
-        <p>Je ne détiens plus de preuve pour cette SAE.</p>
-    </section>
-</main>
+<p class="portfolio">Ce projet nous a permis d’appréhender les enjeux du développement durable et de la transition énergétique, en explorant les possibilités offertes par le réseau LoRaWAN, une technologie à faible consommation énergétique. Nous avons également pris en compte les réglementations en vigueur, notamment en matière de protection des données (RGPD).</p>
+
+<h2>Compétences ciblées</h2>
+<ul>
+  <li class="portfolio">Administrer les réseaux et l’Internet</li>
+  <li class="portfolio">Connecter les entreprises et les usagers</li>
+  <li class="portfolio">Créer des outils et applications informatiques pour les R&T</li>
+</ul>
+
+<h2>Apprentissages critiques (AC)</h2>
+<ul>
+  <li class="portfolio">AC31.01 | Concevoir un projet de réseau informatique d’une entreprise en intégrant les problématiques de haute disponibilité, de QoS, de sécurité et de supervision</li>
+  <li class="portfolio">AC31.02 | Réaliser la documentation technique de ce projet</li>
+  <li class="portfolio">AC31.03 | Réaliser une maquette de démonstration du projet</li>
+  <li class="portfolio">AC31.04 | Défendre/argumenter un projet</li>
+  <li class="portfolio">AC31.05 | Communiquer avec les acteurs du projet</li>
+  <li class="portfolio">AC31.06 | Gérer le projet et les différentes étapes de sa mise en œuvre en respectant les délais</li>
+  <li class="portfolio">AC32.01 | Déployer un système de communication pour l’entreprise</li>
+  <li class="portfolio">AC32.02 | Déployer un réseau d’accès sans fil pour le réseau d’entreprise en intégrant les enjeux de la sécurité</li>
+  <li class="portfolio">AC32.03 | Déployer un réseau d’accès fixe ou mobile pour un opérateur de télécommunications en intégrant la sécurité</li>
+  <li class="portfolio">AC32.04 | Permettre aux collaborateurs de se connecter de manière sécurisée au système d’information de l’entreprise</li>
+  <li class="portfolio">AC32.05 | Collaborer en mode projet en français et en anglais</li>
+  <li class="portfolio">AC33.01 | Élaborer les spécifications techniques et le cahier des charges d’une application informatique</li>
+  <li class="portfolio">AC33.02 | Mettre en place un environnement de travail collaboratif</li>
+  <li class="portfolio">AC33.03 | Participer à la formation des utilisateurs</li>
+  <li class="portfolio">AC33.04 | Déployer et maintenir une solution informatique</li>
+  <li class="portfolio">AC33.05 | S’informer sur les évolutions et les nouveautés technologiques</li>
+  <li class="portfolio">AC33.06 | Sécuriser l’environnement numérique d’une application</li>
+</ul>
+
+<h2>Résumé personnel</h2>
+<p class="portfolio">Grâce à ces apprentissages, je suis désormais capable de concevoir des projets de réseaux informatiques complexes pour les entreprises, en intégrant des solutions de haute disponibilité, de qualité de service (QoS), de sécurité et de supervision. Je peux réaliser une documentation technique détaillée, créer des maquettes de démonstration percutantes et défendre mes projets avec des arguments solides. Ma communication avec les acteurs du projet est efficace, et je gère les projets en respectant les délais. Je suis compétent dans le déploiement de systèmes de communication, de réseaux d'accès sans fil, fixes ou mobiles, tout en assurant la sécurité des connexions. Je maîtrise la collaboration en mode projet, en français et en anglais. De plus, je sais élaborer des spécifications techniques et des cahiers des charges précis, mettre en place des environnements de travail collaboratifs, former les utilisateurs, déployer et maintenir des solutions informatiques. Je me tiens informé des dernières évolutions technologiques et je sais sécuriser les environnements numériques des applications.</p>
+
+<h2>Preuves matérielles</h2>
+<p class="portfolio">Je ne détiens plus de preuve pour cette SAE.</p>
+
 {% endblock %}
