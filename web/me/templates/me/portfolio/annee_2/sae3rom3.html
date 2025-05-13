@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Sae 3.ROM3 : Concevoir un réseau informatique adapté au multimédia
@@ -60,7 +61,7 @@ Sae 3.ROM3 : Concevoir un réseau informatique adapté au multimédia
 <p class="portfolio">La capacité à travailler en équipe, à analyser des cahiers des charges et à documenter des infrastructures complexes a été renforcée. De plus, les participants ont acquis une compréhension approfondie des réseaux opérateurs, de l'architecture d'Internet et des offres des opérateurs, ainsi que des compétences en automatisation de la gestion des équipements réseau.</p>
 
 <h2>Preuves matérielles</h2>
-<p class="portfolio">Vous pouvez consulter les comptes rendus du projet en suivant ce lien :</p>
-<a href="https://drive.google.com/drive/folders/15dP3OD9GgFMpK-1FeByT3iboMIGG4WN7?usp=sharing">Comptes Rendus</a>
+<p class="portfolio">Vous pouvez consulter le zip des comptes rendus du projet en suivant ce lien :</p>
+<a href="{% static 'fichier_autre/annee_2/sae3rom3/sae3rom3.zip' %}" download="">comptes rendus</a>
 
 {% endblock %}

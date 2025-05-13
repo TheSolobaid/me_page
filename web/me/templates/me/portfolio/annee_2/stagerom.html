@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 STAGE.ROM : Alternance
@@ -72,6 +73,5 @@ STAGE.ROM : Alternance
 
 <h2>Preuves matérielles</h2>
 <p class="portfolio">Vous pouvez consulter mon poster détaillant les activités et projets réalisés au sein de l'entreprise en suivant ce lien :</p>
-<a href="https://drive.google.com/drive/folders/1pjN7Nz7BuzJZhiRtR41CiMmz1ss0T0vu?usp=sharing">Poster</a>
-
+<a href="{% static 'fichier_autre/annee_2/stagerom/stagerom.pdf' %}" download="">poster</a>
 {% endblock %}

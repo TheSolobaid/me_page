@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Sae 4.ROM1 : Déployer une infrastructure opérateur et ses services clients
@@ -47,6 +48,5 @@ Sae 4.ROM1 : Déployer une infrastructure opérateur et ses services clients
 
 <h2>Preuves matérielles</h2>
 <p class="portfolio">Vous pouvez consulter le sujet et le cours du projet en suivant ce lien :</p>
-<a href="https://drive.google.com/drive/folders/1F7KFU_RoK9_HMn2Nuy9QZC5L2PF1dP5O?usp=sharing">Sujet et Cour</a>
-
+<a href="{% static 'fichier_autre/annee_2/sae4rom1/sae4rom1.zip' %}" download="">Sujet et Cour</a>
 {% endblock %}

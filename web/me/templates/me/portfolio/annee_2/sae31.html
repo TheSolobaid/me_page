@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Sae 31 : Mettre en œuvre un système de transmission
@@ -42,6 +43,6 @@ Sae 31 : Mettre en œuvre un système de transmission
 <p class="portfolio">Enfin, ma capacité à questionner un cahier des charges RT a été mise en évidence par mon aptitude à analyser les besoins et à proposer des solutions techniques adaptées. Ce projet a donc solidifié mes compétences en conception, déploiement et gestion de systèmes de transmission, ainsi qu'en analyse de cahiers des charges.</p>
 
 <h2>Preuves matérielles</h2>
-<p class="portfolio"><a href="https://drive.google.com/drive/folders/1NUiLhkfUbpe7HaHA95KFLKVpmyRAay1B?usp=sharing" target="_blank">Sujet + Schéma + Application</a></p>
+<p class="portfolio"><a href="{% static 'fichier_autre/annee_2/sae31/sae31.zip' %}" download="">rendu + sujet</a></p>
 
 {% endblock %}

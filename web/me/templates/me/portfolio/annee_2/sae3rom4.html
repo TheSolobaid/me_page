@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Sae 3.ROM4 : Déployer un service de téléphonie multi-sites
@@ -45,7 +46,6 @@ Sae 3.ROM4 : Déployer un service de téléphonie multi-sites
 <p class="portfolio">J’ai également appris à choisir et déployer des architectures ToIP adaptées, à administrer un service de téléphonie pour une entreprise et à mettre en place des politiques de Qualité de Service (QoS) pour garantir la qualité des communications. La capacité à configurer un serveur Asterisk et à utiliser ses fonctionnalités avancées a été particulièrement mise en avant, permettant de simuler un environnement de téléphonie d'entreprise réaliste.</p>
 
 <h2>Preuves matérielles</h2>
-<p class="portfolio">Vous pouvez consulter le compte rendu du projet en suivant ce lien :</p>
-<a href="https://drive.google.com/drive/folders/1U-9R4R2d8hIVpKqilvZVKEfU7T5fIy6v?usp=sharing">Compte Rendu</a>
-
+<p class="portfolio">Vous pouvez télécharger le compte rendu du projet en suivant ce lien :</p>
+<a href="{% static 'fichier_autre/annee_2/sae3rom4/sae3rom4.pdf' %}" download="">compte rendu</a>
 {% endblock %}
