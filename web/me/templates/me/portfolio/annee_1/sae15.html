@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Sae 15 : Traiter des données
@@ -42,8 +43,7 @@ Sae 15 : Traiter des données
 <p class="portfolio">Voici les différentes preuves matérielles de mon travail dans cette SAE :</p>
 
 <ul>
-  <li class="portfolio"><a href="Sae%2015%20Traiter%20des%20donne%CC%81es%201bcc00567e7780969e26cf92ecae0a3c/Ce_qui_faut_faire.txt" target="_blank">Liste des tâches à faire</a></li>
-  <li class="portfolio"><a href="Sae%2015%20Traiter%20des%20donne%CC%81es%201bcc00567e7780969e26cf92ecae0a3c/LOTO.py.rtf" target="_blank">Script final (LOTO.py)</a></li>
-  <li class="portfolio"><a href="Sae%2015%20Traiter%20des%20donne%CC%81es%201bcc00567e7780969e26cf92ecae0a3c/rapport_final.pdf" target="_blank">Rapport final de la SAE</a></li>
+  <li class="portfolio"><a href="{% static 'fichier_autre/annee_1/sae15/loto.zip' %}" download="">fichier zip contenant les différents sciptes python</a></li>
+  <p>du a une panne de mon serveur personnel, j'ai Malheureusement perdu le compte rendu word que j'avais produit. Si je parviens a remmettre la main dessus, il sera ajouté ici.</p>
 </ul>
 {% endblock %}

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Sae 13 : Exploration des dispositifs de transmission
@@ -34,11 +35,11 @@ Sae 13 : Exploration des dispositifs de transmission
 
 <h2>Preuves matérielles</h2>
 <p class="portfolio">Voici le lien vers notre présentation PowerPoint pour cette SAE :</p>
-<p class="portfolio"><a href="https://drive.google.com/drive/folders/1lSPXKOYI7CbH1ZNy73mSksErtnDwf4B2?usp=sharing" target="_blank">SAE 13 PowerPoint</a></p>
+<p class="portfolio"><a href="{% static 'fichier_autre/annee_1/sae13/SAE103.pptx' %}" download="">SAE 13 PowerPoint</a></p>
 
 <h3>HeatMap du Bâtiment C</h3>
 <p class="portfolio">Nous avons généré les HeatMaps pour le bâtiment C afin d'analyser la couverture Wi-Fi et évaluer la qualité du réseau dans différents espaces du bâtiment.</p>
 
-<img src="Sae%2013%20De%CC%81couvrir%20un%20dispositif%20de%20transmission%201bcc00567e7780c6aa78cb94fc8d47ee/e0heatmap5.0.jpg" alt="HeatMap Bâtiment C - Vue 1" />
-<img src="Sae%2013%20De%CC%81couvrir%20un%20dispositif%20de%20transmission%201bcc00567e7780c6aa78cb94fc8d47ee/e1heatmap1_5.jpg" alt="HeatMap Bâtiment C - Vue 2" />
+<img src="{% static 'fichier_autre/annee_1/sae13/1er_etage.png' %}" alt="HeatMap Bâtiment C - Vue 1" />
+<img src="{% static 'fichier_autre/annee_1/sae13/rdc.png' %}" alt="HeatMap Bâtiment C - Vue 2" />
 {% endblock %}

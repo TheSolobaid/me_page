@@ -1,0 +1,137 @@
+
+!
+! Last configuration change at 10:00:09 EET Fri Jan 27 2023
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname Switch
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+ethernet cfm ieee 
+clock timezone EET 2 0
+cef table consistency-check IPv4
+cef table consistency-check IPv6
+!
+!
+!
+!
+!
+ip spd queue max-threshold 1999
+ip spd queue min-threshold 1998
+!
+ip dhcp relay override giaddr link-selection
+!
+!
+ip device tracking trace-buffer
+ip cef
+ip cef load-sharing algorithm universal 6A18BA92
+ipv6 rip vrf-mode enable
+ipv6 multicast rpf use-bgp
+no ipv6 cef
+ipv6 cef load-sharing algorithm universal 6A18BA92
+authentication command bounce-port ignore
+authentication command disable-port ignore
+access-session vlan-assignment ignore-errors
+mpls oam
+ echo revision 4
+clns security pass-through
+no clns want-erpdu
+scripting tcl low-memory 225542022
+no virtual-template subinterface
+no virtual-template snmp
+!
+!
+cts dot1x-server-timeout 30
+cts dot1x-supp-timeout 30
+dot1x system-auth-control
+dot1x auth-fail eapol
+dot1x guest-vlan supplicant
+dot1x supplicant force-multicast
+dot1x supplicant controlled transient
+port-channel auto
+!
+spanning-tree mode pvst
+no spanning-tree dispute
+spanning-tree extend system-id
+!
+!
+! 
+crypto ikev2 authorization policy default
+ route set interface
+!
+crypto ikev2 proposal default
+ encryption aes-cbc-256 aes-cbc-192 aes-cbc-128
+ integrity sha512 sha384 sha256 sha1 md5
+ group 5 2
+!
+crypto ikev2 policy default
+ match fvrf any
+ proposal default
+!
+crypto ikev2 fragmentation
+!
+!
+crypto ipsec transform-set default esp-aes esp-sha-hmac 
+!
+crypto ipsec profile default
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ no shutdown
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface Ethernet0/1
+ no shutdown
+ switchport access vlan 40
+!
+interface Ethernet0/2
+ no shutdown
+!
+interface Ethernet0/3
+ no shutdown
+!
+ip forward-protocol nd
+!
+ip http server
+!
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+!
+ip sla low-memory 222318026
+ip sla server twamp
+logging server-arp
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+ monitor
+line vty 0 4
+ login
+ monitor
+!
+exception crashinfo file unix:crashinfo_00032
+!
+restconf
+netconf-yang
+!
+end

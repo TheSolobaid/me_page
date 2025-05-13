@@ -1,0 +1,213 @@
+
+!
+! Last configuration change at 10:04:47 EET Fri Jan 27 2023
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+ethernet cfm ieee 
+clock timezone EET 2 0
+cef table consistency-check IPv4
+cef table consistency-check IPv6
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+ip nbar resources system 30 2015 25
+!
+!
+!
+!
+ip ips memory threshold 5
+ip inspect log drop-pkt
+no ip inspect fast
+ip device tracking probe use-svi
+ip cef
+ip cef load-sharing algorithm universal 4EC5405B
+no ipv6 cef
+ipv6 cef load-sharing algorithm universal 4EC5405B
+ipv6 dhcp iana-route-add
+ipv6 rip vrf-mode enable
+ipv6 multicast rpf use-bgp
+!
+parameter-map type inspect global
+ sessions maximum 2147483647
+ alert on
+ WAAS disable
+ l2-transparent dhcp-passthrough disable
+ log dropped-packets enable
+ max-incomplete low 18000
+ max-incomplete high 20000
+ one-minute low 2147483647
+ one-minute high 2147483647
+parameter-map type inspect default
+ audit-trail off
+ alert on
+ max-incomplete low 2147483647
+ max-incomplete high 2147483647
+ one-minute low 2147483647
+ one-minute high 2147483647
+ udp idle-time 30
+ icmp idle-time 10
+ dns-timeout 5
+ tcp idle-time 3600
+ tcp finwait-time 5
+ tcp synwait-time 30
+ tcp max-incomplete host 4294967295 block-time 0
+ sessions maximum 2147483647
+
+parameter-map type ooo global
+multilink bundle-name authenticated
+clns security pass-through
+no clns want-erpdu
+mpls oam
+ echo revision 4
+!
+no virtual-template subinterface
+no virtual-template snmp
+!
+!
+!
+!
+!
+!
+!
+dot1x system-auth-control
+eou logging
+!
+redundancy
+scripting tcl low-memory 216137539
+!
+!
+csdb alarm
+! 
+crypto ikev2 authorization policy default
+ route set interface
+!
+crypto ikev2 proposal default
+ encryption aes-cbc-256 aes-cbc-192 aes-cbc-128
+ integrity sha512 sha384 sha256 sha1 md5
+ group 5 2
+!
+crypto ikev2 policy default
+ match fvrf any
+ proposal default
+!
+crypto ikev2 fragmentation
+crypto isakmp aggressive-mode disable
+!
+!
+crypto ipsec transform-set default esp-aes esp-sha-hmac 
+!
+crypto ipsec profile default
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ no shutdown
+ no ip address
+ hold-queue 40 out
+!
+interface Ethernet0/0.10
+ no shutdown
+ encapsulation dot1Q 10
+ ip address 172.20.53.38 255.255.255.248
+ ip helper-address 172.20.53.17
+!
+interface Ethernet0/0.20
+ no shutdown
+ encapsulation dot1Q 20
+ ip address 172.20.53.190 255.255.255.192
+ ip helper-address 172.20.53.17
+!
+interface Ethernet0/0.30
+ no shutdown
+ encapsulation dot1Q 30
+ ip address 172.20.53.22 255.255.255.248
+ ip helper-address 172.20.53.17
+!
+interface Ethernet0/0.40
+ no shutdown
+ encapsulation dot1Q 40
+ ip address 172.20.53.70 255.255.255.248
+ ip helper-address 172.20.53.17
+!
+interface Ethernet0/1
+ no shutdown
+ no ip address
+ shutdown
+ hold-queue 40 out
+!
+interface Ethernet0/2
+ no shutdown
+ no ip address
+ shutdown
+ hold-queue 40 out
+!
+interface Ethernet0/3
+ no shutdown
+ no ip address
+ shutdown
+ hold-queue 40 out
+!
+ip forward-protocol nd
+ip forward-protocol udp bootps
+ip forward-protocol udp bootpc
+!
+!
+no ip http server
+no ip http secure-server
+!
+ip sla low-memory 212358019
+ip sla server twamp
+logging server-arp
+!
+!
+!
+control-plane
+!
+call fallback jitter-probe priority-queue
+call fallback jitter-probe dscp 2
+call fallback monitor
+!
+!
+!
+!
+!
+!
+dial-peer search type data voice
+!
+line con 0
+ logging synchronous
+line aux 0
+ monitor
+line vty 0 4
+ login
+ monitor
+ transport input none
+!
+!
+end

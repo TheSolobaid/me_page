@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Sae 12 : Découverte des réseaux informatiques
@@ -39,13 +40,13 @@ Sae 12 : Découverte des réseaux informatiques
 <h3>Configurations des équipements</h3>
 <p class="portfolio">Voici les fichiers de configuration des différents équipements utilisés lors du projet :</p>
 <ul>
-  <li class="portfolio"><a href="Sae%2012%20S%E2%80%99initier%20aux%20re%CC%81seaux%20informatiques%201bcc00567e7780138f4dd5214278421f/switch.txt" target="_blank">switch.txt</a></li>
-  <li class="portfolio"><a href="Sae%2012%20S%E2%80%99initier%20aux%20re%CC%81seaux%20informatiques%201bcc00567e7780138f4dd5214278421f/routeur.txt" target="_blank">routeur.txt</a></li>
-  <li class="portfolio"><a href="Sae%2012%20S%E2%80%99initier%20aux%20re%CC%81seaux%20informatiques%201bcc00567e7780138f4dd5214278421f/switch_client.txt" target="_blank">switch_client.txt</a></li>
-  <li class="portfolio"><a href="Sae%2012%20S%E2%80%99initier%20aux%20re%CC%81seaux%20informatiques%201bcc00567e7780138f4dd5214278421f/Server_linux.txt" target="_blank">Server_linux.txt</a></li>
+  <li class="portfolio"><a href="{% static 'fichier_autre/annee_1/sae12/switch.txt' %}" download>switch.txt</a></li>
+  <li class="portfolio"><a href="{% static 'fichier_autre/annee_1/sae12/routeur.txt' %}" download>routeur.txt</a></li>
+  <li class="portfolio"><a href="{% static 'fichier_autre/annee_1/sae12/switch_client.txt' %}" download>switch_client.txt</a></li>
+  <li class="portfolio"><a href="{% static 'fichier_autre/annee_1/sae12/Server_linux.txt' %}" download>server_linux.txt</a></li>
 </ul>
 
 <h3>Topologie du réseau</h3>
 <p class="portfolio">Voici la topologie du réseau que nous avons mise en place durant ce projet :</p>
-<img src="Sae%2012%20S%E2%80%99initier%20aux%20re%CC%81seaux%20informatiques%201bcc00567e7780138f4dd5214278421f/SAE12_cap.png" alt="Topologie du réseau" />
+<img src="{% static 'fichier_autre/annee_1/sae12/SAE12_cap.png' %}" alt="Topologie du réseau" />
 {% endblock %}

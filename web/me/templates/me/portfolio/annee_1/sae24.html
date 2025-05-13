@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Sae 24 : Projet intégratif en réseaux et télécommunications
@@ -63,5 +64,5 @@ Sae 24 : Projet intégratif en réseaux et télécommunications
 <h2>Preuves matérielles</h2>
 
 <p class="portfolio">Vous pouvez consulter la documentation complète de notre projet en suivant ce lien :</p>
-<p class="portfolio"><a href="https://drive.google.com/drive/folders/1-9oIDvLJ5XAMiyuFI0SDIAadvB4149nY?usp=sharing" target="_blank">Documentation de notre projet</a></p>
+<p class="portfolio"><a href="{% static 'fichier_autre/annee_1/sae24/sae24.zip' %}" download="">Documentation de notre projet</a></p>
 {% endblock %}
